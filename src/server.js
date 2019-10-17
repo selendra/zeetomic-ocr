@@ -16,5 +16,5 @@ App.use(json());
 App.use(_.post("/pushimage", ocr.ocr));
   
 App.listen(9002);
-console.log(`S3 Server started at 9002`);
+console.log(`ZOCR Server started at 9002`);
   
