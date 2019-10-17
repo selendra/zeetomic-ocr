@@ -1,0 +1,25 @@
+{
+  "name": "zeetomic-ocr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "fs": "0.0.1-security",
+    "koa": "^2.10.0",
+    "koa-body": "^4.1.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json": "^2.0.2",
+    "koa-route": "^3.2.0",
+    "koa2-swagger-ui": "^2.15.4",
+    "request": "^2.88.0",
+    "swagger-koa": "^2.1.0",
+    "tesseract.js": "^1.0.19"
+  }
+}
