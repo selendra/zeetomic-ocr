@@ -4,10 +4,7 @@ const uuid = require("uuid/v4");
 var fs = require("fs");
 
 let url;
-
-var genName = uuid();
-var filename = `./temp/${genName}`;
-
+let filename;
 const readPromise = function() {
   return new Promise(function(resolve, reject) {
     var writeFile = fs.createWriteStream(filename);
@@ -32,9 +29,11 @@ exports.ocr = async ctx => {
   // var _amount = ctx.request.body.amount;
   // var _trxdate = ctx.request.body.trxdate;
   url = ctx.request.body.imguri;
-
+  var getName = ctx.request.body.filename;
+  filename = `./temp/${getName}`;
   // var _xtAmount;
-  const data = await readPromise(url);
+  console.log(url);
+  const data = await readPromise(url, filename);
   // var lengthOfData = data.length;
   // for (i = 0; i < lengthOfData; i++) {
   //   for (y = 0; y < lengthOfData; y++) {
@@ -57,6 +56,6 @@ exports.ocr = async ctx => {
   // }
   console.log(data);
   ctx.status = 200;
-  ctx.body = { data: { uuid: genName, content: data } };
+  ctx.body = { data: { uuid: getName, content: data } };
   return 0;
 };
