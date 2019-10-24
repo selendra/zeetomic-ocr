@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -21,6 +20,7 @@
     "koa2-swagger-ui": "^2.15.4",
     "request": "^2.88.0",
     "swagger-koa": "^2.1.0",
-    "tesseract.js": "^1.0.19"
+    "tesseract.js": "^1.0.19",
+    "uuid": "^3.3.3"
   }
 }
