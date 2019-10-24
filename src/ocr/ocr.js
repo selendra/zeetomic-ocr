@@ -18,8 +18,8 @@ const readPromise = function() {
           .catch(err => console.error(err))
           .then(function(result) {
             console.log(result);
-            var res = result.text.split("\n");
-            resolve(res);
+            // var res = result.text.split("\n");
+            resolve(result.text);
           });
       });
   });
@@ -56,6 +56,6 @@ exports.ocr = async ctx => {
   // }
   console.log(data);
   ctx.status = 200;
-  ctx.body = { data: { uuid: getName, content: data } };
+  ctx.body = { uuid: getName, content: data };
   return 0;
 };
